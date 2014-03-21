@@ -1,1 +1,22 @@
-Hello World
+---
+layout: default
+title: Datamagi
+---
+
+<div id="home">
+  	<h1>Datamagi</h1>
+  	<div>Welcome to my code log... I'll aim to use this site as a place to document my journey back to coding after a few years in ppt hell...</div>
+
+  	<div>&nbsp;</div>
+
+	<h1>Blog Posts</h1>
+	<ul class="posts">
+		{% for post in site.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	    {% endfor %}
+	</ul>
+
+	<h1>Resources</h1>
+	<div>Useful resources will go here...</div>	
+	<div>&nbsp;</div>
+</div>
